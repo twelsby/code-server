@@ -6,5 +6,5 @@ RUN apt update && \
       build-essential \
       cmake \
       gdb \
-      libboost-all-dev
-
+      libboost-all-dev && \
+    curl https://sh.rustup.rs -sSf | sh -s -y
