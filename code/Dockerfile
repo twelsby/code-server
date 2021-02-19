@@ -8,6 +8,10 @@ RUN curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash - && \
       cmake \
       gdb \
       libboost-all-dev \
+      openssl \
+      libssl-dev \
+      pkg-config \
       nodejs && \
-    curl https://sh.rustup.rs -sSf | sh -s -y && \
+    curl https://sh.rustup.rs -sSf | bash -s -- -y && \
+    . ~/.cargo/env && \
     cargo install wasm-pack cargo-generate
